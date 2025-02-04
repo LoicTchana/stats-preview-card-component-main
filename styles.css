@@ -1,0 +1,163 @@
+*{
+    margin:0;
+}
+
+
+body{
+    background-color:hsl(233, 47%, 7%);
+}
+
+
+/*Personnalisation du frame/cadre principal pour lui donner une longueur, une largeur etc*/
+fieldset{
+    background-color:hsl(244, 38%, 16%) ;
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+    position:relative;
+    top:150px;
+    left:15%;
+    width:850px;
+    height:300px;
+    border:none;
+}
+
+
+
+/*personnalisation balises*/
+h1{
+    color:hsl(0, 0%, 100%) ;
+}
+
+span{
+    color:hsl(277, 64%, 61%)  ;
+}
+
+h3{
+    color:hsl(0, 0%, 100%) ;
+}
+
+p{
+    color:hsla(0, 0%, 100%, 0.6)
+}
+
+
+
+
+
+/*Reglages des colonnes avec flex:row*/
+.columns{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+    
+}
+
+
+/*Arrangement première colonne*/
+.first-column{
+
+    margin-left:30px;
+    margin-top:30px;
+    
+    padding-right:100px;
+}
+
+
+/*Companies,etc*/
+.caracteristics{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    
+}
+
+
+
+img{
+    width:400px;
+    height:310px;
+    position:relative;
+    left:5px;
+    margin-right:-5px;
+    margin-top:-5px;
+    background-color: blue; /* Couleur HSL */
+    
+
+}
+
+
+.attribution{
+    position:relative;
+    top:250px;
+    left:420px;
+    color:whitesmoke;
+
+}
+
+.image_container{
+    position: relative;
+    
+    
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left:5px;
+    margin-right:-10px;
+    margin-top:-5px;
+    background-color: rgba(170, 92, 219, 0.4); /* Couleur violette avec transparence*/
+    pointer-events: none; /* Ignore les événements de souris */
+}
+
+
+
+
+/*Adaptation aux différentes tailles d'écran de largeur maximale 512px(responsive design) */
+@media screen and (max-width:512px){
+
+
+    fieldset{
+        height:800px;
+        width:300px;
+    }
+
+    .columns{
+        display:flex;
+        flex-direction:column-reverse;
+    }
+
+
+    img{
+        width:330px;
+        margin-left:-12px;
+        margin-right:px;
+    }
+
+    .first-column{
+        text-align:center;
+        margin-left:10px;
+        margin-right:-50px;
+    }
+
+    .caracteristics{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:40px;
+        
+        
+    }
+
+    .attribution{
+        display:none;
+    }
+
+    .color-overlay{
+        margin-left:-6px;
+    }
+}
+
